@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<canvas id="myCanvas" width="1600" height="1200"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var image = new Image();
+    image.src="worldMap.jpg";
+    image.onload = function(){
+    	console.log("Loaded Image");
+    	ctx.drawImage(image,0,0,canvas.width,canvas.height);
+    	// ctx.fillRect(0,0,50,50);
+    	// ctx.clearRect(0,0,25,25);
+    	 // Text attributes
+      ctx.font = '20pt Impact';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'red';
+
+   
+        ctx.fillText( "California", 360, 600);
+
+    }
+    
+
+</script>
+
+</body>
+</html>
